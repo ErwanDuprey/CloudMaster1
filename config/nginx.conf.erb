@@ -37,5 +37,9 @@ http {
 		root /app; # path to your app
 
 		error_page 404 /error/index.html;
+		# location = /esgi pour dire que c'est exclusif à esgi
+		location /esgi{
+		    try_files /index.html =404;
+		}
 	}
 }
